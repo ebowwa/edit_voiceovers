@@ -27,6 +27,7 @@ next steps:
 - gui
 - gemini api depth
 - ollama, together.ai, perplexity support
+- calc diff btwn frames
 
 **current bug is gemini safety~ism**
 
