@@ -1,8 +1,8 @@
 import cv2
 import base64
-from load_video import load_video
-from video_properties import get_video_properties
-from frame_rate_conversion import convert_frame_rate
+from video.load_video import load_video
+from video.video_properties import get_video_properties
+from video.frame_rate_conversion import convert_frame_rate
 
 def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
     video_filename = video_file_path

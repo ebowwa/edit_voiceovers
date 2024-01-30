@@ -1,4 +1,5 @@
-from video.video_processing import video_to_frames
+# from video.video_processing import video_to_frames
+from video.video import video_to_frames
 from tts.text_to_speech import generate_speech
 from utils.img_processing import base64_to_image
 from utils.logger import log_response
