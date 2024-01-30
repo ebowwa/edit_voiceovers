@@ -1,6 +1,6 @@
 background
 
-i worked on a hackathon this weekend were we experimented in automating `short film content`, we failed but ive thought on. i think we were ambitious, this dramatically scales down the complexity while also experimenting with a potentially exciting project.
+i worked on a hackathon this weekend where we toy'd with automating `short film content`, we failed but ive thought on. i think we were ambitious, this dramatically scales down the complexity while also experimenting with a potentially exciting project.
 
 we built around the idea of using twelvelabs to be our video agent, which would be a far different result and could serve as an added future feature.
 
