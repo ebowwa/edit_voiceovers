@@ -16,9 +16,10 @@ table of contents
     > `prompts` : include prompts to narrate videos
     > `gemini`: include gemini api handling
     > `video`: processing video to frame rate
+    > `tts`: resemble text-to-speech api
 
 next steps: 
-- tts for the LLM calls to voice over the videos - elevenlabs is expensive for a demo. hoping to get support from resemble for the voice-cloning.
+- finish tts merge
 - more prompts
 - gui
 - gemini api depth
