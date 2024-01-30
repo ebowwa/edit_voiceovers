@@ -9,7 +9,7 @@ def main():
     api_key = get_api_key()
     configure_genai(api_key)
 
-    image_path = 'example/for_loyal_client.png'
+    image_path = 'public/for_loyal_client.png'
     prompt = read_prompt_from_markdown('prompts/narrator.md')
     
     response_text = generate_content_from_image(image_path, prompt)
