@@ -18,12 +18,14 @@ next steps:
 
 **current bug is gemini safety~ism**
 
-installation 
-```
-check `requirements.txt`
+for installation check
+``` 
+requirements.txt
 ```
 
 once dependencies are installed 
+add your api key and rename `env.example` to `.env`
+then run
 ```
-run `python main.py`
+python main.py
 ```
