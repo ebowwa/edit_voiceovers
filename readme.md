@@ -25,11 +25,17 @@ influencers to clone:
 
 
 table of contents
+
     > `examples` : gemini api functions
+    
     > `prompts` : include prompts to narrate videos
+    
     > `gemini`: include gemini api handling
+    
     > `video`: processing video to frame rate
+    
     > `tts`: resemble text-to-speech api
+    
     > `retrieval_sources`: download content via urls from social platforms
 
 next steps: 
