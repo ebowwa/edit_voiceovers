@@ -1,3 +1,5 @@
+# automating influencers
+
 background
 
 i worked on a hackathon this weekend where we toy'd with automating `short film content`, we failed but ive thought on. i think we were ambitious, this dramatically scales down the complexity while also experimenting with a potentially exciting project.
