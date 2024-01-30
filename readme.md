@@ -4,7 +4,7 @@ i worked on a hackathon this weekend were we experimented in automating `short f
 
 we build around the idea of using twelvelabs to be our video agent, which would be a far different result and could serve as an added future feature.
 
-this approach substitues this with assuming the user already has a video in mind and rather is interested in seeing how else an `intelligence` could see it
+this approach substitues this with assuming the user already has a video in mind and rather is interested in seeing how else an `intelligence` could see it. Audiences like content in third-person; see sports, podcasts, talkshow hosts, tiktok edits, etc
 
     > see [https://x.com/julesterpak/status/1749205480931557710?s=20] on the importance of edits
 
