@@ -11,7 +11,7 @@ def generate_content_from_image(image_path, prompt):
     return response.text
 
 if __name__ == "__main__":
-    from auth import get_api_key
+    from gemini.auth_gemini import get_api_key
 
     def read_prompt_from_markdown(file_path):
         with open(file_path, 'r') as file:

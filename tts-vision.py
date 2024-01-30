@@ -2,7 +2,7 @@ import os
 from gemini.vision_api import generate_content_from_image, configure_genai
 from tts.speech import run_example as run_speech_example
 from tts.auth_resemble import initialize_resemble_client 
-from gemini.auth import get_api_key
+from gemini.auth_gemini import get_api_key
 
 def main():
     # Configure and initialize APIs
