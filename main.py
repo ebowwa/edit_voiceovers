@@ -34,5 +34,5 @@ def process_video(video_path, prompt_path):
 
 # Example usage
 process_video('public/AdobeStock_607123108_Video_HD_Preview.mov', 'prompts/narrations/narrator.md')
-# have speech overlayed onto original video
+# have speech overlayed onto original video `/Users/ebowwa/Desktop/edit_voiceovers/utils/overlay_audio.py`
 # sweet spot between video length and generated llm content && generated llm content per frame rate to get equal coverage over full film
