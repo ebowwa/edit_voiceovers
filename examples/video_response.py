@@ -1,6 +1,6 @@
 from gemini.auth_gemini import get_api_key
 from gemini.vision_api import configure_genai, generate_content_from_image
-from video.video_processing import video_to_frames
+from video.video_processing import video_to_frames # since been refactored; depreciated
 import cv2
 import numpy as np
 import base64
