@@ -8,12 +8,7 @@ def generate_content_from_image(image_path, prompt):
     model = genai.GenerativeModel('gemini-pro-vision')
     img = PIL.Image.open(image_path)
     response = model.generate_content([prompt, img])
-
-    # Handle multipart response
-    if hasattr(response, 'parts'):
-        return ''.join(part.text for part in response.parts)
-    else:
-        return response.text
+    return response.text
 
 if __name__ == "__main__":
     from gemini.auth_gemini import get_api_key
@@ -29,10 +24,7 @@ if __name__ == "__main__":
         image_path = 'public/for_loyal_client.png'
         prompt = read_prompt_from_markdown('prompts/narrator.md')
 
-        try:
-            response_text = generate_content_from_image(image_path, prompt)
-            print(response_text)
-        except ValueError as e:
-            print(f"Error processing the response: {e}")
+        response_text = generate_content_from_image(image_path, prompt)
+        print(response_text)
 
     main()
