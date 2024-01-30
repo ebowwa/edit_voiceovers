@@ -1,6 +1,3 @@
-# resemble-clone-voice-recording/main.py
-
-# -- snipped --
 def trigger_voice_build(voice_uuid: str):
     response = Resemble.v2.voices.build(uuid=voice_uuid)
 
@@ -13,5 +10,3 @@ def trigger_voice_build(voice_uuid: str):
         print(response)
 
         return False
-
-# -- snipped --
