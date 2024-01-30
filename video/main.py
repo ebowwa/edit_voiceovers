@@ -7,7 +7,11 @@ from frame_rate_conversion import convert_frame_rate
 def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
     video_filename = video_file_path
     video = load_video(video_filename)
-    original_frame_rate, video_duration = get_video_properties(video_filename)
+
+    # Now get_video_properties returns a dictionary
+    video_props = get_video_properties(video_filename)
+    original_frame_rate = video_props["Original Frame Rate"]
+    video_duration = video_props["Video Duration"]
 
     frame_sampling_interval = round(original_frame_rate / frame_rate)
     base64_frames = []
