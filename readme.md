@@ -36,3 +36,4 @@ then run
 ```
 python main.py
 ```
+## note to LARGE PROVIDERS plz dont release a vision llm video model this week
