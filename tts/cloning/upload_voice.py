@@ -1,6 +1,3 @@
-# resemble-clone-voice-recording/main.py
-
-# -- snipped --
 def upload_recordings(voice_uuid: str, recordings_folder:str):
     print(f"Beginning recording upload process from folder: {recordings_folder}")
 
@@ -30,4 +27,3 @@ def upload_recordings(voice_uuid: str, recordings_folder:str):
             failures+= 1
 
     print(f"Recording upload completed, finished uploading {success} successful and {failures} failures")
-# -- snipped --
