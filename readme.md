@@ -23,6 +23,7 @@ next steps:
 - more prompts
 - gui
 - gemini api depth
+- ollama, together.ai, perplexity support
 
 **current bug is gemini safety~ism**
 
