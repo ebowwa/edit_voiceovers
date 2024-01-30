@@ -30,6 +30,7 @@ table of contents
     > `gemini`: include gemini api handling
     > `video`: processing video to frame rate
     > `tts`: resemble text-to-speech api
+    > `retrieval_sources`: download content via urls from social platforms
 
 next steps: 
 - import and implement overlay in main.py utils/overlay_audio.py
