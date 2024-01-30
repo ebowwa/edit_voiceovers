@@ -16,7 +16,7 @@ def generate_content_from_image(image_path, prompt):
         return response.text
 
 if __name__ == "__main__":
-    from gemini.auth_gemini import get_api_key
+    from auth_gemini import get_api_key
 
     def read_prompt_from_markdown(file_path):
         with open(file_path, 'r') as file:
@@ -26,8 +26,8 @@ if __name__ == "__main__":
         api_key = get_api_key()
         configure_genai(api_key)
 
-        image_path = 'public/for_loyal_client.png'
-        prompt = read_prompt_from_markdown('prompts/narrator.md')
+        image_path = '/Users/ebowwa/Desktop/edit_voiceovers/public/for_loyal_client.png'
+        prompt = read_prompt_from_markdown('/Users/ebowwa/Desktop/edit_voiceovers/prompts/narrations/narrator.md')
 
         try:
             response_text = generate_content_from_image(image_path, prompt)

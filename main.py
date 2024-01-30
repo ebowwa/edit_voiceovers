@@ -4,11 +4,11 @@ from tts.text_to_speech import generate_speech
 from utils.img_processing import base64_to_image
 from utils.logger import log_response
 from utils.api_interaction import configure_apis, get_content_from_image
-# from utils.overlay_audio import overlay_audio
+from utils.overlay_audio import overlay_audio  # Imported overlay_audio function
 import os
 import cv2
 
-def process_video(video_path, prompt_path):
+def process_video(video_path, prompt_path, audio_path, output_video_path):
     configure_apis()
     base64_frames, _, _ = video_to_frames(video_path)
 
@@ -33,7 +33,8 @@ def process_video(video_path, prompt_path):
         if os.path.exists(temp_image_path):
             os.remove(temp_image_path)
 
+    # Overlay the generated audio onto the original video
+    overlay_audio(video_path, audio_path, output_video_path)
+
 # Example usage
-process_video('public/AdobeStock_607123108_Video_HD_Preview.mov', 'prompts/narrations/narrator.md')
-# have speech overlayed onto original video `/Users/ebowwa/Desktop/edit_voiceovers/utils/overlay_audio.py`
-# sweet spot between video length and generated llm content && generated llm content per frame rate to get equal coverage over full film
+process_video('public/AdobeStock_607123108_Video_HD_Preview.mov', 'prompts/narrations/narrator.md', '/Users/ebowwa/Desktop/edit_voiceovers/generated_audio.wav', 'output_video.mp4')

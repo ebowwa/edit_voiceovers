@@ -1,3 +1,5 @@
+# not currently in use
+
 import time
 
 class Throttle:

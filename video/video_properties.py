@@ -45,5 +45,6 @@ def get_video_properties(video_file_path):
     return properties
 
 # Example usage
-properties = get_video_properties("public/AdobeStock_607123108_Video_HD_Preview.mov")
-print(properties)
+if __name__ == "__main__":
+ properties = get_video_properties("public/AdobeStock_607123108_Video_HD_Preview.mov")
+ print(properties)
