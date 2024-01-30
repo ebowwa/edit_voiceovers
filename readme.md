@@ -21,7 +21,7 @@ table of contents
     > `tts`: resemble text-to-speech api
 
 next steps: 
-- add the tts download as video overlay
+- import and implement overlay in main.py
 - perfect llm generating & gen. sequence
 - more prompts
 - gui
