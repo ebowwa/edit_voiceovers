@@ -3,3 +3,5 @@
 python-dotenv
 resemble
 moviepy
+Pillow
+google-generativeai
