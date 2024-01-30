@@ -6,9 +6,10 @@ we build around the idea of using twelvelabs to be our video agent, which would 
 
 this approach substitues this with assuming the user already has a video in mind and rather is interested in seeing how else an `intelligence` could see it. Audiences like content in third-person; see sports, podcasts, talkshow hosts, tiktok edits, etc
 
-    > see [https://x.com/julesterpak/status/1749205480931557710?s=20] on the importance of edits
-
-simple goal: i like to watch `https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==` videos and i think that they can simply be automated, or even other content, applying this to teaching audiences could be a nice idea 
+on the importance of edits see
+[https://x.com/julesterpak/status/1749205480931557710?s=20]
+    
+simple goal: i like to watch [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==] videos and i think that they can simply be automated, or even other content, applying this to teaching audiences could be a nice idea 
 
 table of contents
 
