@@ -14,8 +14,15 @@ on the importance of edits see
 goal: i like to watch [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==] videos and i think that they can simply be automated, or even other content, applying this to teaching audiences could be a nice idea 
 
 influencers to clone:
-[https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]
-[]
+
+[https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]            # our instagram download sample
+
+[https://www.tiktok.com/@tanaradoublechocolate?_t=8jTZfv1GsLG&_r=1]      # out tiktok download sample
+
+[youtube]
+
+[twitter]
+
 
 table of contents
 
