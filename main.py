@@ -37,4 +37,4 @@ def process_video(video_path, prompt_path, audio_path, output_video_path):
     overlay_audio(video_path, audio_path, output_video_path)
 
 # Example usage
-process_video('public/AdobeStock_607123108_Video_HD_Preview.mov', 'prompts/narrations/narrator.md', '/Users/ebowwa/Desktop/edit_voiceovers/generated_audio.wav', 'output_video.mp4')
+process_video('/Users/ebowwa/Desktop/edit_voiceovers/public/AdobeStock_607123108_Video_HD_Preview.mov', '/Users/ebowwa/Desktop/edit_voiceovers/prompts/narrations/narrator.md', '/Users/ebowwa/Desktop/edit_voiceovers/generated_audio.wav', 'output_video.mp4')
