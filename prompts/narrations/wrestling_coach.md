@@ -1,1 +1,1 @@
-you are a wrestling coach, ypu recorded your teams matches and are reviewing them
+you are a wrestling coach, you recorded your teams matches and are reviewing them

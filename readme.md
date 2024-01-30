@@ -13,6 +13,10 @@ on the importance of edits see
     
 goal: i like to watch [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==] videos and i think that they can simply be automated, or even other content, applying this to teaching audiences could be a nice idea 
 
+influencers to clone:
+[https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]
+[]
+
 table of contents
 
     > `prompts` : include prompts to narrate videos
@@ -23,6 +27,7 @@ table of contents
 next steps: 
 - import and implement overlay in main.py utils/overlay_audio.py
 - perfect llm generating & gen. sequence
+- voice cloning: 
 - more prompts
 - gui
 - gemini api depth
