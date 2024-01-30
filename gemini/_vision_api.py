@@ -1,10 +1,11 @@
+import google.generativeai as genai
 import PIL.Image
-from model_setup import configure_genai
-from auth_gemini import get_api_key
+
+def configure_genai(api_key):
+    genai.configure(api_key=api_key)
 
 def generate_content_from_image(image_path, prompt):
-    api_key = get_api_key()
-    model = configure_genai(api_key)
+    model = genai.GenerativeModel('gemini-pro-vision')
     img = PIL.Image.open(image_path)
     response = model.generate_content([prompt, img])
 
@@ -15,12 +16,16 @@ def generate_content_from_image(image_path, prompt):
         return response.text
 
 if __name__ == "__main__":
+    from auth_gemini import get_api_key
 
     def read_prompt_from_markdown(file_path):
         with open(file_path, 'r') as file:
             return file.read().strip()
 
     def main():
+        api_key = get_api_key()
+        configure_genai(api_key)
+
         image_path = '/Users/ebowwa/Desktop/edit_voiceovers/public/for_loyal_client.png'
         prompt = read_prompt_from_markdown('/Users/ebowwa/Desktop/edit_voiceovers/prompts/narrations/narrator.md')
 
