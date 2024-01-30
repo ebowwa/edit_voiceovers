@@ -25,7 +25,7 @@ influencers to clone:
 
 
 table of contents
-
+    > `examples` : gemini api functions
     > `prompts` : include prompts to narrate videos
     > `gemini`: include gemini api handling
     > `video`: processing video to frame rate
