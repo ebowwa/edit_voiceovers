@@ -28,7 +28,7 @@ next steps:
 - gemini api depth
 - ollama, together.ai, perplexity support
 - calc diff btwn frames
-- toggable whisper transcriptions woth timestamps used in the input prompt
+- toggable whisper transcriptions with timestamps used in the input prompt
 
 **current bug is gemini safety~ism**
 
