@@ -19,7 +19,7 @@ def main():
     configure_genai(api_key)
 
     video_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
-    prompt = read_prompt_from_markdown('prompts/narrator.md')
+    prompt = read_prompt_from_markdown('prompts/narrations/narrator.md')
 
     base64_frames, _, _ = video_to_frames(video_path)
     

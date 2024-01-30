@@ -1,3 +1,5 @@
+# deprectiated in favor of new modular scipts and concurrent directory
+# still maintained due to compatibility with examples
 import cv2
 import base64
 from moviepy.editor import VideoFileClip
