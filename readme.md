@@ -21,7 +21,7 @@ table of contents
     > `tts`: resemble text-to-speech api
 
 next steps: 
-- import and implement overlay in main.py
+- import and implement overlay in main.py utils/overlay_audio.py
 - perfect llm generating & gen. sequence
 - more prompts
 - gui
