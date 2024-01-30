@@ -1,4 +1,8 @@
+background
+
 i worked on a hackathon this weekend were we experimented in automating `short film content`, we failed but ive thought on. i think we were ambitious, this dramatically scales down the complexity while also experimenting with a potentially exciting project.
+we build around the idea of using twelvelabs to be our video agent, which would be a far different result but an exciting result nontheless and could serve as an added future feature.
+this approach substitues this with assuming the user already has a video in mind and rather is interested in seeing how else an `intelligence` could see it
 
 table of contents
 
