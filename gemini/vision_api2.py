@@ -1,4 +1,3 @@
-
 import google.generativeai as genai
 import PIL.Image
 from gemini.rate_limit import RateLimitedQueue
