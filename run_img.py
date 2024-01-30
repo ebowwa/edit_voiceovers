@@ -1,5 +1,5 @@
-from auth import get_api_key
-from vision_api import configure_genai, generate_content_from_image
+from voiceovers.auth import get_api_key
+from voiceovers.vision_api import configure_genai, generate_content_from_image
 
 def read_prompt_from_markdown(file_path):
     with open(file_path, 'r') as file:

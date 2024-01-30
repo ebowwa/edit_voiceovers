@@ -1,7 +1,7 @@
 import os
 
 def get_api_key():
-    api_key = os.environ.get("GEMINI_API_KEY", " ")
+    api_key = os.environ.get("GEMINI_API_KEY", "YOUR_API_KEY")
     if not api_key:
         raise ValueError("""
             You haven't set up your API key yet.

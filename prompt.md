@@ -1,1 +1,0 @@
-Write a short, engaging blog post based on this picture.

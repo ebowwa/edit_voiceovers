@@ -1,6 +1,6 @@
-from auth import get_api_key
-from vision_api import configure_genai, generate_content_from_image
-from video_processing import video_to_frames
+from gemini.auth import get_api_key
+from gemini.vision_api import configure_genai, generate_content_from_image
+from video.video_processing import video_to_frames
 import cv2
 import numpy as np
 import base64
@@ -19,7 +19,7 @@ def main():
     configure_genai(api_key)
 
     video_path = '/Users/ebowwa/Downloads/twittervid.com_InternetH0F_4838b1.mp4'
-    prompt = read_prompt_from_markdown('prompt.md')
+    prompt = read_prompt_from_markdown('prompts/narrator.md')
 
     base64_frames, _, _ = video_to_frames(video_path)
     

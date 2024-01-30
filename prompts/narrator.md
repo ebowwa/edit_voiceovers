@@ -1,0 +1,1 @@
+Write a short, engaging blog post based on this picture, imagine you are being shown live footage
