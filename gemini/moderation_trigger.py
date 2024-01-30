@@ -1,0 +1,1 @@
+# fuck gemini safety, the moderation endpoints can break runs this shall check for the breaks, and retry
