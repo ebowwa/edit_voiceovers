@@ -39,9 +39,9 @@ table of contents
     > `retrieval_sources`: download content via urls from social platforms
 
 next steps: 
-- import and implement overlay in main.py utils/overlay_audio.py
 - perfect llm generating & gen. sequence
-- voice cloning: 
+- implement `retrieval_sources` into the workflow
+- voice cloning
 - more prompts
 - gui
 - gemini api depth
