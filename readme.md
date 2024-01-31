@@ -17,11 +17,9 @@ influencers to clone:
 
 [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]            # our instagram download sample
 
-[https://www.tiktok.com/@tanaradoublechocolate?_t=8jTZfv1GsLG&_r=1]      # out tiktok download sample
+[https://www.tiktok.com/@tanaradoublechocolate?_t=8jTZfv1GsLG&_r=1]      # our tiktok download sample
 
-[youtube]
-
-[twitter]
+[(https://youtube.com/@WISEspade7?si=vMCCcuO5WCSVEPdS)]                  # our youtube download sample
 
 
 table of contents
