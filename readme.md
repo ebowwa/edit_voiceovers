@@ -38,6 +38,8 @@ shorts are a great medium to getting people's attention, given the attention eco
 
 ### next steps: 
 - perfect llm generating & gen. sequence
+  **current bug is gemini safety~ism** & **frame rates per vision preview**
+
 - implement `retrieval_sources` into the workflow
 - voice cloning
 - more prompts
@@ -46,8 +48,6 @@ shorts are a great medium to getting people's attention, given the attention eco
 - ollama, together.ai, perplexity support
 - calc diff btwn frames
 - toggable whisper transcriptions with timestamps used in the input prompt
-
-**current bug is gemini safety~ism**
 
 for installation check
 ``` 
