@@ -61,3 +61,5 @@ then run
 python main.py
 ```
 **note to LARGE PROVIDERS plz dont release a vision llm video model this week**
+
+current 6 frames per second collage thinking about a frame per second 6 frame collage
