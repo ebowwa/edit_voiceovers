@@ -17,7 +17,7 @@ def generate_speech(response_text, project_uuid, voice_uuid, title):
         )
 
         if clip_url:
-            download_audio(clip_url, 'generated_audio.wav')
+            download_audio(clip_url, 'generated_audio.wav') # needs a fix so that it doesnt saev under this name and that sequential order of generation is tracked
         else:
             print("No audio clip URL received.")
 

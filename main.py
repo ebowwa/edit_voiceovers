@@ -38,4 +38,4 @@ def process_video(video_path, prompt_path, audio_path, output_video_path):
     overlay_audio(video_path, audio_path, output_video_path)
 
 # Example usage
-process_video('public/wrestling.mp4', 'prompts/narrations/narrator.md', 'generated_audio.wav', 'output_video.mp4')
+process_video('public/wrestling.mp4', 'prompts/narrations/machine_god.md', 'generated_audio.wav', 'output_video.mp4')
