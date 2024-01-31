@@ -11,9 +11,10 @@ this approach substitues this with assuming the user already has a video in mind
 on the importance of edits see
 [https://x.com/julesterpak/status/1749205480931557710?s=20]
     
-goal: i like to watch [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==] videos and i think that they can simply be automated, or even other content, applying this to teaching audiences could be a nice idea 
+## goal: 
+shorts are a great medium to getting people's attention, given the attention economy any means to further attention is valuable. Shorts a great way to capture this value,some types of shorts like `narrated edits`, `commedy-reactions`, etc can simply be automated, or even other content, applying this to teaching audiences could be a great resource. 
 
-influencers to clone:
+## influencers to clone:
 
 [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]            # our instagram download sample
 
@@ -22,7 +23,7 @@ influencers to clone:
 [(https://youtube.com/@WISEspade7?si=vMCCcuO5WCSVEPdS)]                  # our youtube download sample
 
 
-table of contents
+## table of contents
 
     > `examples` : gemini api functions
     
@@ -36,7 +37,7 @@ table of contents
     
     > `retrieval_sources`: download content via urls from social platforms
 
-next steps: 
+### next steps: 
 - perfect llm generating & gen. sequence
 - implement `retrieval_sources` into the workflow
 - voice cloning
@@ -60,4 +61,4 @@ then run
 ```
 python main.py
 ```
-## note to LARGE PROVIDERS plz dont release a vision llm video model this week
+**note to LARGE PROVIDERS plz dont release a vision llm video model this week**
