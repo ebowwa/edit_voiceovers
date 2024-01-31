@@ -1,7 +1,7 @@
 import cv2
 import base64
 from video.load_video import load_video
-from video_properties import get_video_properties
+from video.video_properties import get_video_properties
 from video.frame_rates.frame_rate_conversion import convert_frame_rate
 # from video.frame_rates.frame_rate_conversion import convert_frame_rate
 

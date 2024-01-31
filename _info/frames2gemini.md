@@ -1,5 +1,4 @@
 # frame rates to picture img vision model 
-
 To efficiently process video frames for inference with optimal balance between speed and accuracy, you'd want a formula that selects frames at a rate that aligns with both the frame rate of the video and the computational capacity available for inference. The goal is to process enough frames to accurately capture the dynamics of the video without overwhelming the system or missing critical information.
 
 Here's a general approach:
@@ -46,4 +45,6 @@ Here's what each row means:
 
 60+ fps: Higher frame rates like 60 fps or more provide ultra-smooth motion, which is particularly noticeable in fast-action scenes. It's commonly used in gaming and can be found in some high-frame-rate (HFR) films.
 
-overlay images and show time on them. This is a common technique in video processing and graphics design to create a timestamp or to embed additional information onto an image
+- overlay images and show time on them. This is a common technique in video processing and graphics design to create a timestamp or to embed additional information onto an image
+
+- Bit rate measures the number of bits per second that a graphics card can output, while frame rate determines the speed at which frames are displayed. 

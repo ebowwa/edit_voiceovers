@@ -17,12 +17,10 @@ shorts are a great medium to getting people's attention, given the attention eco
 ## influencers to clone:
 
 [https://www.instagram.com/supparay14k?igsh=ZDE1MWVjZGVmZQ==]            # our instagram download sample
-https://www.instagram.com/reel/C1p-1OYPg5r/?igsh=ZDE1MWVjZGVmZQ==
-food https://www.instagram.com/reel/C0FTsrNye-3/?igsh=ZDE1MWVjZGVmZQ==
+
 [https://www.tiktok.com/@tanaradoublechocolate?_t=8jTZfv1GsLG&_r=1]      # our tiktok download sample
 
 [(https://youtube.com/@WISEspade7?si=vMCCcuO5WCSVEPdS)]                  # our youtube download sample
-
 
 ## table of contents
 

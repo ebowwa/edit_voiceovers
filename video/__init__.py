@@ -2,4 +2,4 @@ from .load_video import load_video
 from .frame_rates.video_frame_data_calculator import calculate_video_frame_data
 from .frame_rates.frame_rate_conversion import convert_frame_rate
 from .video_properties import get_video_properties
-from .video2frames import video_to_frames
+from .twoframe import video_to_frames

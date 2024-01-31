@@ -1,5 +1,5 @@
 # from video.video_processing import video_to_frames
-from video.video2frames import video_to_frames
+from video.twoframe import video_to_frames
 from tts.text_to_speech import generate_speech
 from utils.img_processing import base64_to_image
 from utils.logger import log_response
@@ -38,4 +38,4 @@ def process_video(video_path, prompt_path, audio_path, output_video_path):
     overlay_audio(video_path, audio_path, output_video_path)
 
 # Example usage
-process_video('/Users/ebowwa/Desktop/edit_voiceovers/public/AdobeStock_607123108_Video_HD_Preview.mov', '/Users/ebowwa/Desktop/edit_voiceovers/prompts/narrations/narrator.md', '/Users/ebowwa/Desktop/edit_voiceovers/generated_audio.wav', 'output_video.mp4')
+process_video('public/wrestling.mp4', 'prompts/narrations/narrator.md', 'generated_audio.wav', 'output_video.mp4')
