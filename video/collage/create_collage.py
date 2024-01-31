@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import base64
+from video.collage.overlay_images import overlay_images 
 
 # Updating the create_collage function to properly count a single collage
 def base64_to_image(base64_string):
@@ -42,8 +43,13 @@ def create_collage(base64_frames, timestamps, rows=2, cols=3, img_size=(200, 200
 
     # Print the number of frames added to the single collage
     print(f"{frames_added_to_collage} frames added at 30 fps.")
-    # Print that one collage was created, regardless of the number of frames
-    print("Number of collages created: 1")
     print("Collage saved as collage.jpg")
 
     return collage
+
+# The high-level script can now use the overlay_images function.
+# For example, after creating a collage, overlay it with another image and add a timestamp.
+if __name__ == "__main__":
+    # Assume 'collage.jpg' is the collage created from the create_collage function
+    # and 'watermark.jpg' is an image to overlay on top of the collage.
+    overlay_images('collage.jpg', 'watermark.jpg', 'final_collage_with_timestamp.jpg')
