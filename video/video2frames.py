@@ -2,7 +2,7 @@ import cv2
 import base64
 from video.load_video import load_video
 from video.video_properties import get_video_properties
-from video.frame_rate_conversion import convert_frame_rate
+from video.frame_rates.frame_rate_conversion import convert_frame_rate
 
 def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
     video_filename = video_file_path
@@ -15,6 +15,7 @@ def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
 
     frame_sampling_interval = round(original_frame_rate / frame_rate)
     base64_frames = []
+    timestamps = []
     frame_count = 0
 
     while video.isOpened():
@@ -25,6 +26,7 @@ def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
         if frame_count % frame_sampling_interval == 0:
             _, buffer = cv2.imencode(".jpg", frame)
             base64_frames.append(base64.b64encode(buffer).decode("utf-8"))
+            timestamps.append(frame_count / original_frame_rate)
         
         frame_count += 1
         if frame_count % (60 * frame_sampling_interval) == 0:
@@ -37,10 +39,10 @@ def video_to_frames(video_file_path, frame_rate=30, target_frame_rate=None):
 
     print(f"{len(base64_frames)} frames read at {frame_rate} fps.")
 
-    return base64_frames, video_filename, video_duration
+    return base64_frames, timestamps, video_filename, video_duration
 
 # Example usage
 if __name__ == "__main__":
     video_path = "public/AdobeStock_607123108_Video_HD_Preview.mov"
-    frames, filename, duration = video_to_frames(video_path, target_frame_rate=24)
+    frames, timestamps, filename, duration = video_to_frames(video_path, target_frame_rate=24)
     print(f"Processed {filename} with duration {duration} seconds.")
