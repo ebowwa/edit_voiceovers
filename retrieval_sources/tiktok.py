@@ -1,4 +1,5 @@
-# fix video not downloading properly
+# work in progress
+# not working so far
 
 import requests
 import re
@@ -33,5 +34,5 @@ if __name__ == "__main__":
     save_dir = input("Enter the directory to save the video: ")
     if not os.path.exists(save_dir):
         print(f"Directory {save_dir} does not exist. Creating it.")
-        os.makedirs(save_dir)
+        os.mkdir(save_dir)  # Use os.mkdir instead of os.makedirs
     download_tiktok_video(url, save_dir)

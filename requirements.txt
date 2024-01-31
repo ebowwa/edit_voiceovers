@@ -6,3 +6,4 @@ moviepy
 Pillow
 google-generativeai
 instaloader
+psycopg2

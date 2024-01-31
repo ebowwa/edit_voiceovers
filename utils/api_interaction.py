@@ -9,3 +9,4 @@ def configure_apis():
 
 def get_content_from_image(image_path, prompt):
     return generate_content_from_image(image_path, prompt)
+## image_path

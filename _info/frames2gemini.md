@@ -25,3 +25,25 @@ Where:
 - **Desired Processing Rate** is how many frames per second you want to process, based on your system's capabilities and the requirements of the inference task.
 
 This approach ensures that you are feeding frames at a rate that is manageable for your system and appropriate for the inference task at hand. Remember, the key is to balance between the computational cost and the need for temporal resolution in the video analysis.
+
+concept that compares frames per second (fps) with perceived quality and human interpretation:
+
+Frames Per Second (fps)	Quality & Motion	Human Interpretation
+1	Low	Individual, static images
+10-12	Moderate	Threshold for perceived motion
+24	Cinematic	Smooth motion, film-like quality
+30	TV/Video	Very smooth motion, high-quality video
+60+	High	Ultra-smooth motion, used in gaming and high-frame-rate films
+Here's what each row means:
+
+1 fps: Choosing one frame per second would mean you have static images with no perceived motion. This is like a slideshow and can be used for a collage representing each second of a video.
+
+10-12 fps: This is the lower threshold where humans begin to perceive individual images as motion. It's not smooth but can convey movement.
+
+24 fps: The film industry standard, offering a balance between a natural motion blur and efficiency in data. It's perceived as high quality because of its association with cinema.
+
+30 fps: This is a common standard for digital video, producing smooth motion while still being efficient on data. It's often used for TV broadcasts and online video.
+
+60+ fps: Higher frame rates like 60 fps or more provide ultra-smooth motion, which is particularly noticeable in fast-action scenes. It's commonly used in gaming and can be found in some high-frame-rate (HFR) films.
+
+overlay images and show time on them. This is a common technique in video processing and graphics design to create a timestamp or to embed additional information onto an image

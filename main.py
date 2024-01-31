@@ -10,7 +10,8 @@ import cv2
 
 def process_video(video_path, prompt_path, audio_path, output_video_path):
     configure_apis()
-    base64_frames, _, _ = video_to_frames(video_path)
+    # Change here: Use an asterisk (*) to capture the rest of the return values in a variable called `_rest`
+    base64_frames, *_rest = video_to_frames(video_path)
 
     for base64_frame in base64_frames:
         image = base64_to_image(base64_frame)
