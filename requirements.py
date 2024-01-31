@@ -5,3 +5,4 @@ resemble
 moviepy
 Pillow
 google-generativeai
+instaloader

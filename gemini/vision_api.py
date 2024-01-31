@@ -1,6 +1,6 @@
 import PIL.Image
-from model_setup import configure_genai
-from auth_gemini import get_api_key
+from gemini.model_setup import configure_genai
+from gemini.auth_gemini import get_api_key
 
 def generate_content_from_image(image_path, prompt):
     api_key = get_api_key()
