@@ -21,7 +21,7 @@ if __name__ == "__main__":
             return file.read().strip()
 
     def main():
-        image_path = '/Users/ebowwa/Desktop/edit_voiceovers/public/for_loyal_client.png'
+        image_path = 'public/vision.png'
         prompt = read_prompt_from_markdown('/Users/ebowwa/Desktop/edit_voiceovers/prompts/narrations/narrator.md')
 
         try:

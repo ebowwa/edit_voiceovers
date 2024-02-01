@@ -8,9 +8,9 @@ def configure_genai(api_key):
     genai.configure(api_key=api_key)
 
     generation_config = {
-        "temperature": 0.1, #0.55
-        "top_p": 0, # 1
-        "top_k": 60, # 32
+        "temperature": 0.75, #0.55
+        "top_p": 1, # 1
+        "top_k": 32, # 32
         "max_output_tokens": 50, # 4096
     }
 
@@ -19,7 +19,7 @@ def configure_genai(api_key):
         {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
         {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
         {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
-    ]
+    ]    
 
     model = genai.GenerativeModel(model_name="gemini-pro-vision",
                                   generation_config=generation_config,
