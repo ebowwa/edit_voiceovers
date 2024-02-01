@@ -58,7 +58,7 @@ once dependencies are installed
 add your api key and rename `env.example` to `.env`
 then run
 ```
-python video-lm.py
+python video-lm.py # will send the video for gemini narration
 ```
 **note to LARGE PROVIDERS plz dont release a vision llm video model this week**
 
