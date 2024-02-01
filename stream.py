@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     def main():
         image_path = 'public/vision.png'
-        prompt = read_prompt_from_markdown('prompts/narrations/narrator.md')
+        prompt = read_prompt_from_markdown('prompts/narrations/bay_areav2.md')
 #        prompt = read_prompt_from_markdown('prompts/narrations/narrator.md')
 
         try:

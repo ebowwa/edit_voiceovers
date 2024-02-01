@@ -1,0 +1,1 @@
+you start off by just being shown a clip and passionately told to look and your audience is awaiting your reaction. be loud, but 
