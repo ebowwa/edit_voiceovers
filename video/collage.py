@@ -1,41 +1,47 @@
 import cv2
-from frame_rates.frame_rate_conversion import convert_frame_rate
-from frame_rates.video_properties import get_video_properties
-from video.frame_rates.calculator.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
+import base64
+import numpy as np
+from extract_frames import process_video  # Replace with the actual filename of your first script
+from collage.create_collage import create_collage  # Replace with the actual filename of your second script
 
-def process_video(video_file_path, target_frame_rate):
+def convert_frames_to_base64(adjusted_frames):
     """
-    Processes a video file to adjust its frame rate and get its properties.
+    Converts frames into base64 strings.
 
     Parameters:
-    video_file_path (str): The path to the video file.
-    target_frame_rate (int): The target frame rate to convert the video to.
+    adjusted_frames (list): A list of image frames.
 
     Returns:
-    dict: A dictionary containing the video properties and the adjusted frame rate.
+    list: A list of base64-encoded strings.
     """
-    # Get video properties
-    video_props = get_video_properties(video_file_path)
+    base64_frames = []
+    for frame in adjusted_frames:
+        _, buffer = cv2.imencode('.jpg', frame)
+        base64_string = base64.b64encode(buffer).decode()
+        base64_frames.append(base64_string)
+    return base64_frames
 
-    # Extract frames from the video using the function from the imported script
-    frames = extract_frames_from_video(video_file_path)
+def main(video_file_path, target_frame_rate):
+    # Process the video
+    processed_video = process_video(video_file_path, target_frame_rate)
+    
+    # Convert adjusted frames to base64 for collage creation
+    base64_frames = convert_frames_to_base64(processed_video['Adjusted Frames'])
+    
+    # Generate timestamps for frames (assuming 1 frame per second for simplicity)
+    timestamps = list(range(len(base64_frames)))
 
-    # Convert frame rate
-    adjusted_frames = convert_frame_rate(frames, target_frame_rate, video_props['Original Frame Rate'])
+    # Create a collage
+    collage = create_collage(base64_frames, timestamps)
 
-    # Analyze frame rate changes using the function from the imported script
-    frame_rate_analysis = analyze_frame_rate_changes(video_file_path)
+    # Save collage to file
+    if collage is not None:
+        collage_file = 'collage.jpg'
+        cv2.imwrite(collage_file, collage)
+        print(f"Collage created: {collage_file}")
 
-    # Return the video properties along with adjusted frames and frame rate analysis
-    return {
-        'Video Properties': video_props,
-        'Adjusted Frames': adjusted_frames,
-        'Frame Rate Analysis': frame_rate_analysis
-    }
-
-# Example usage
 if __name__ == "__main__":
     video_file = "public/wrestling.mp4"
     target_fps = 30
-    processed_video = process_video(video_file, target_fps)
-    print(processed_video)
+
+    main(video_file, target_fps)

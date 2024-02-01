@@ -1,4 +1,3 @@
-
 import cv2
 import datetime
 
@@ -19,7 +18,15 @@ def overlay_images(image_path1, image_path2, output_path='overlay_with_timestamp
     image1 = cv2.imread(image_path1)
     image2 = cv2.imread(image_path2)
 
-    # Resize images to the same size if necessary
+    # Check if images are loaded successfully
+    if image1 is None:
+        print(f"Error: Unable to load image at {image_path1}")
+        return
+    if image2 is None:
+        print(f"Error: Unable to load image at {image_path2}")
+        return
+
+    # Resize image2 to the size of image1
     image2 = cv2.resize(image2, (image1.shape[1], image1.shape[0]))
 
     # Overlay image2 onto image1

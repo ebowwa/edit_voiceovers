@@ -1,29 +1,7 @@
-
 import cv2
 from frame_rates.frame_rate_conversion import convert_frame_rate
 from frame_rates.video_properties import get_video_properties
-
-def extract_frames_from_video(video_file_path):
-    """ 
-    Extracts frames from a video file.
-
-    Parameters:
-    video_file_path (str): The path to the video file.
-
-    Returns:
-    list: A list of video frames.
-    """
-    video_capture = cv2.VideoCapture(video_file_path)
-    frames = []
-
-    while True:
-        ret, frame = video_capture.read()
-        if not ret:
-            break
-        frames.append(frame)
-
-    video_capture.release()
-    return frames
+from frame_rates.calculator.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
 
 def process_video(video_file_path, target_frame_rate):
     """
@@ -39,16 +17,21 @@ def process_video(video_file_path, target_frame_rate):
     # Get video properties
     video_props = get_video_properties(video_file_path)
 
-    # Extract frames from the video
+    # Extract frames from the video using the function from the imported script
     frames = extract_frames_from_video(video_file_path)
 
     # Convert frame rate
     adjusted_frames = convert_frame_rate(frames, target_frame_rate, video_props['Original Frame Rate'])
 
-    # Return the video properties along with adjusted frames
+    # Analyze frame rate changes using the function from the imported script
+    frame_rate_analysis = analyze_frame_rate_changes(video_file_path)
+
+    # Return the video properties along with adjusted frames and frame rate analysis
     return {
         'Video Properties': video_props,
-        'Adjusted Frames': adjusted_frames
+        'Adjusted Frames': adjusted_frames,
+        'Frame Rate Analysis': frame_rate_analysis,
+        'frames' : frames
     }
 
 # Example usage
