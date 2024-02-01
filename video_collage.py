@@ -1,6 +1,6 @@
 from video.collage_build import main as collage_main
 
-def higher_level_function():
+def video_collage():
     video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
     target_frame_rate = 27
      
