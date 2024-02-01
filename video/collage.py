@@ -21,24 +21,44 @@ def convert_frames_to_base64(adjusted_frames):
         base64_frames.append(base64_string)
     return base64_frames
 
-def main(video_file_path, target_frame_rate):
+def chunk_frames(base64_frames, chunk_size):
+    """
+    Splits the frames into chunks.
+
+    Parameters:
+    base64_frames (list): A list of base64-encoded strings.
+    chunk_size (int): The number of frames per chunk.
+
+    Returns:
+    list: A list of chunks, each chunk is a list of base64-encoded strings.
+    """
+    for i in range(0, len(base64_frames), chunk_size):
+        yield base64_frames[i:i + chunk_size]
+
+def main(video_file_path, target_frame_rate, max_frames_per_collage=18):
     # Process the video
     processed_video = process_video(video_file_path, target_frame_rate)
     
     # Convert adjusted frames to base64 for collage creation
     base64_frames = convert_frames_to_base64(processed_video['Adjusted Frames'])
     
-    # Generate timestamps for frames (assuming 1 frame per second for simplicity)
-    timestamps = list(range(len(base64_frames)))
+    # Split frames into chunks
+    frame_chunks = list(chunk_frames(base64_frames, max_frames_per_collage))
 
-    # Create a collage
-    collage = create_collage(base64_frames, timestamps)
+    # Create collages for each chunk
+    for i, frames_chunk in enumerate(frame_chunks):
+        # Generate timestamps for this chunk of frames
+        timestamps = list(range(i * max_frames_per_collage, i * max_frames_per_collage + len(frames_chunk)))
 
-    # Save collage to file
-    if collage is not None:
-        collage_file = 'collage.jpg'
-        cv2.imwrite(collage_file, collage)
-        print(f"Collage created: {collage_file}")
+        # Create a collage
+        collage = create_collage(frames_chunk, timestamps)
+
+        # Save collage to file
+        if collage is not None:
+            collage_directory = "collages"  # Specify your directory name
+            collage_file = f'{collage_directory}/collage_{i+1}.jpg'
+            cv2.imwrite(collage_file, collage)
+            print(f"Collage {i+1} created: {collage_file}")
 
 if __name__ == "__main__":
     video_file = "public/wrestling.mp4"
