@@ -61,3 +61,5 @@ then run
 python main.py
 ```
 **note to LARGE PROVIDERS plz dont release a vision llm video model this week**
+
+gemini docs https://cloud.google.com/vertex-ai/docs/generative-ai/migrate/migrate-google-ai

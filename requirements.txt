@@ -1,5 +1,6 @@
 # pip install --upgrade Pillow
 # pip install -q -U google-generativeai
+# pip install --upgrade google-cloud-aiplatform
 python-dotenv
 resemble
 moviepy
