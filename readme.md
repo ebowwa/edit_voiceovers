@@ -65,3 +65,7 @@ python video-lm.py # will send the video for gemini narration
 current 6 frames per second collage thinking about a frame per second 6 frame collage
 
 gemini docs https://cloud.google.com/vertex-ai/docs/generative-ai/migrate/migrate-google-ai
+
+```
+No matter how much you test and mitigate, you can never guarantee perfection, so plan upfront how you'll spot and deal with problems that arise. Common approaches include setting up a monitored channel for users to share feedback (e.g., thumbs up/down rating) and running a user study to proactively solicit feedback from a diverse mix of users — especially valuable if usage patterns are different to expectations.
+```
