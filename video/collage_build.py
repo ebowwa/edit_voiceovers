@@ -2,7 +2,7 @@ import os
 import cv2
 import base64
 import numpy as np
-from video.extract_frames import process_video  
+from video.process_video import process_video  
 from video.collage.create_collage import create_collage 
 
 def convert_frames_to_base64(adjusted_frames):
