@@ -1,3 +1,4 @@
+# no stream here
 from gemini.auth_gemini import get_api_key
 from gemini.vision_api import configure_genai, generate_content_from_image
 
