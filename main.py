@@ -28,7 +28,7 @@ def process_video(video_path, prompt_path, audio_path, output_video_path):
         voice_uuid = "d3e61caf"
         title = "Generated Content Title"
 
-        generate_speech(response_text, project_uuid, voice_uuid, title)
+        generate_speech(response_text, project_uuid, voice_uuid, title, sequence_number)
 
         # Clean up temporary image file
         if os.path.exists(temp_image_path):

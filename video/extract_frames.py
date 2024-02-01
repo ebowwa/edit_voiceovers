@@ -36,7 +36,13 @@ def process_video(video_file_path, target_frame_rate):
 
 # Example usage
 if __name__ == "__main__":
-    video_file = "public/wrestling.mp4"
-    target_fps = 30
-    processed_video = process_video(video_file, target_fps)
+    video_file_path = "public/wrestling.mp4"
+    # Get video properties
+    video_props = get_video_properties(video_file_path)
+
+    # Calculate the target frame rate based on the video's original frame rate and total frames
+    target_fps = int(video_props['Frame Count'] / video_props['Video Duration'])
+
+    # Process the video with the calculated target frame rate
+    processed_video = process_video(video_file_path, target_fps)
     print(processed_video)

@@ -1,7 +1,7 @@
 import cv2
 from moviepy.editor import VideoFileClip
 import os
-from frame_rates.calculator.video_frame_data_calculator import calculate_video_frame_data
+from video.frame_rates.calculator.video_frame_data_calculator import calculate_video_frame_data
 
 def get_video_properties(video_file_path):
     # Extract frame rate and frame count using the imported function

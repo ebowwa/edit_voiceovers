@@ -1,8 +1,9 @@
+import os
 import cv2
 import base64
 import numpy as np
-from extract_frames import process_video  # Replace with the actual filename of your first script
-from collage.create_collage import create_collage  # Replace with the actual filename of your second script
+from extract_frames import process_video  
+from collage.create_collage import create_collage 
 
 def convert_frames_to_base64(adjusted_frames):
     """
@@ -55,10 +56,14 @@ def main(video_file_path, target_frame_rate, max_frames_per_collage=18):
 
         # Save collage to file
         if collage is not None:
-            collage_directory = "collages"  # Specify your directory name
+            collage_directory = "_temp_collages"  # Specify your directory name
+            if not os.path.exists(collage_directory):
+                os.makedirs(collage_directory)
             collage_file = f'{collage_directory}/collage_{i+1}.jpg'
             cv2.imwrite(collage_file, collage)
             print(f"Collage {i+1} created: {collage_file}")
+
+### after use `"_temp_collages" `` should be deleted
 
 if __name__ == "__main__":
     video_file = "public/wrestling.mp4"
