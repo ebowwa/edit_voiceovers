@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import base64
-from collage.overlay_images import overlay_images 
+from video.collage.overlay_images import overlay_images 
 
 # Updating the create_collage function to properly count a single collage
 def base64_to_image(base64_string):

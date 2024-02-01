@@ -2,8 +2,8 @@ import os
 import cv2
 import base64
 import numpy as np
-from extract_frames import process_video  
-from collage.create_collage import create_collage 
+from video.extract_frames import process_video  
+from video.collage.create_collage import create_collage 
 
 def convert_frames_to_base64(adjusted_frames):
     """
@@ -62,7 +62,7 @@ def main(video_file_path, target_frame_rate, max_frames_per_collage=18):
             collage_file = f'{collage_directory}/collage_{i+1}.jpg'
             cv2.imwrite(collage_file, collage)
             print(f"Collage {i+1} created: {collage_file}")
-
+            return collage_directory
 ### after use `"_temp_collages" `` should be deleted
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import cv2
-from frame_rates.frame_rate_conversion import convert_frame_rate
-from frame_rates.video_properties import get_video_properties
-from frame_rates.calculator.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
+from video.frame_rates.frame_rate_conversion import convert_frame_rate
+from video.frame_rates.video_properties import get_video_properties
+from video.frame_rates.calculator.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
 
 def process_video(video_file_path, target_frame_rate):
     """
@@ -16,6 +16,7 @@ def process_video(video_file_path, target_frame_rate):
     """
     # Get video properties
     video_props = get_video_properties(video_file_path)
+    print(video_props)
 
     # Extract frames from the video using the function from the imported script
     frames = extract_frames_from_video(video_file_path)

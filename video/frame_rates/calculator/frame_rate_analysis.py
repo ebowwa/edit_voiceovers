@@ -1,6 +1,7 @@
 
 import cv2
 import numpy as np
+import logging
 
 def extract_frames_from_video(video_file_path):
     """ 
@@ -12,17 +13,24 @@ def extract_frames_from_video(video_file_path):
     Returns:
     list: A list of video frames.
     """
-    video_capture = cv2.VideoCapture(video_file_path)
-    frames = []
+    try:
+        video_capture = cv2.VideoCapture(video_file_path)
+        if not video_capture.isOpened():
+            raise IOError(f"Cannot open video file: {video_file_path}")
 
-    while True:
-        ret, frame = video_capture.read()
-        if not ret:
-            break
-        frames.append(frame)
+        frames = []
+        while True:
+            ret, frame = video_capture.read()
+            if not ret:
+                break
+            frames.append(frame)
+        video_capture.release()
+        return frames
 
-    video_capture.release()
-    return frames
+    except Exception as e:
+        logging.error(f"An error occurred while extracting frames: {e}")
+        return []
+
 
 def calculate_frame_differences(frames):
     '''
