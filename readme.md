@@ -46,8 +46,8 @@ shorts are a great medium to getting people's attention, given the attention eco
 - gui
 - gemini api depth
 - ollama, together.ai, perplexity support
-- calc diff btwn frames
-- toggable whisper transcriptions with timestamps used in the input prompt
+- more calc diff btwn frames / scrutiny
+- toggable whisper/equivalent transcriptions with timestamps used in the input prompt
 
 for installation check
 ``` 
