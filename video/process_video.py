@@ -44,6 +44,9 @@ if __name__ == "__main__":
     # Calculate the target frame rate based on the video's original frame rate and total frames
     target_fps = int(video_props['Frame Count'] / video_props['Video Duration'])
 
+    # display 1 frame per second + for the uploaded video 3-4 min max run
+
+
     # Process the video with the calculated target frame rate
     processed_video = process_video(video_file_path, target_fps)
     print(processed_video)
