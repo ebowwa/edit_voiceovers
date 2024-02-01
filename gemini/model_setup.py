@@ -11,7 +11,7 @@ def configure_genai(api_key):
         "temperature": 0.75, #0.55
         "top_p": 1, # 1
         "top_k": 32, # 32
-        "max_output_tokens": 50, # 4096
+        "max_output_tokens": 75, # 4096
     }
 
     safety_settings =   [

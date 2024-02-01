@@ -31,8 +31,8 @@ if __name__ == "__main__":
 
     def main():
         image_path = 'public/vision.png'
-#        prompt = read_prompt_from_markdown('prompts/narrations/comedy-reactions.md')
         prompt = read_prompt_from_markdown('prompts/narrations/narrator.md')
+#        prompt = read_prompt_from_markdown('prompts/narrations/narrator.md')
 
         try:
             response = generate_content_from_image(image_path, prompt)
