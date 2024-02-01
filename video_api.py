@@ -3,7 +3,7 @@ from video.load_video import load_video
 from video.video_to_frames import video_to_frames
 from utils.img_processing import base64_to_image
 from utils.api_interaction import configure_apis
-from video.video_properties import get_video_properties
+from video.frame_rates.video_properties import get_video_properties
 from video.collage.create_collage import create_collage
 
 def process_video_frames(video_path):

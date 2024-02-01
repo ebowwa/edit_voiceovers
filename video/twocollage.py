@@ -1,5 +1,5 @@
 import cv2
-from video.twoframe import video_to_frames
+from _examples.twoframe import video_to_frames
 from video.collage.create_collage import create_collage
 
 def process_video_to_collage(video_file_path, frame_rate=30, target_frame_rate=None, rows=2, cols=3, img_size=(200, 200)):
