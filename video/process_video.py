@@ -1,7 +1,7 @@
 import cv2
 from video.frame_rates.frame_rate_conversion import convert_frame_rate
 from video.frame_rates.video_properties import get_video_properties
-from video.frame_rates.calculator.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
+from _examples.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes
 
 def process_video(video_file_path, target_frame_rate):
     """
@@ -37,7 +37,7 @@ def process_video(video_file_path, target_frame_rate):
 
 # Example usage
 if __name__ == "__main__":
-    video_file_path = "public/wrestling.mp4"
+    video_file_path = "public/AdobeStock_607123108_Video_HD_Preview.mov"
     # Get video properties
     video_props = get_video_properties(video_file_path)
 

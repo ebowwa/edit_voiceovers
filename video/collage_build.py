@@ -36,17 +36,26 @@ def chunk_frames(base64_frames, chunk_size):
     for i in range(0, len(base64_frames), chunk_size):
         yield base64_frames[i:i + chunk_size]
 
-def main(video_file_path, target_frame_rate, max_frames_per_collage=18):
+
+def main(video_file_path, target_frame_rate):
     # Process the video
     processed_video = process_video(video_file_path, target_frame_rate)
     
     # Convert adjusted frames to base64 for collage creation
     base64_frames = convert_frames_to_base64(processed_video['Adjusted Frames'])
+
+    # Calculate chunk size to include all frames
+    total_frames = len(base64_frames)
+    max_frames_per_collage = max(18, total_frames // (total_frames // 18 + (total_frames % 18 > 0)))
     
     # Split frames into chunks
     frame_chunks = list(chunk_frames(base64_frames, max_frames_per_collage))
 
     # Create collages for each chunk
+    collage_directory = "_temp_collages"  # Specify your directory name
+    if not os.path.exists(collage_directory):
+        os.makedirs(collage_directory)
+
     for i, frames_chunk in enumerate(frame_chunks):
         # Generate timestamps for this chunk of frames
         timestamps = list(range(i * max_frames_per_collage, i * max_frames_per_collage + len(frames_chunk)))
@@ -56,13 +65,11 @@ def main(video_file_path, target_frame_rate, max_frames_per_collage=18):
 
         # Save collage to file
         if collage is not None:
-            collage_directory = "_temp_collages"  # Specify your directory name
-            if not os.path.exists(collage_directory):
-                os.makedirs(collage_directory)
             collage_file = f'{collage_directory}/collage_{i+1}.jpg'
             cv2.imwrite(collage_file, collage)
             print(f"Collage {i+1} created: {collage_file}")
-            return collage_directory
+
+    return collage_directory
 ### after use `"_temp_collages" `` should be deleted
 
 if __name__ == "__main__":
