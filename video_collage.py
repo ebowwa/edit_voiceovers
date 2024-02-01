@@ -11,4 +11,4 @@ def video_collage():
 
 # Call your higher-level function
 if __name__ == "__main__":
-    higher_level_function()
+    video_collage()
