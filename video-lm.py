@@ -27,7 +27,7 @@ def main():
         response = generate_content_from_image(image_path, prompt)
         print(f"Response for {collage}: {response}")
 
-        # Implement any additional logic for sequential processing or storing context
+        # add resemble and utils/overlay_audio.py
 
 if __name__ == "__main__":
     main()
