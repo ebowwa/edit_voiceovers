@@ -58,11 +58,8 @@ once dependencies are installed
 add your api key and rename `env.example` to `.env`
 then run
 ```
-python video-lm.py # will send the video for gemini narration
+python video-gemini.py # will send the video for gemini narration
 ```
-**note to LARGE PROVIDERS plz dont release a vision llm video model this week**
-
-current 6 frames per second collage thinking about a frame per second 6 frame collage
 
 gemini docs https://cloud.google.com/vertex-ai/docs/generative-ai/migrate/migrate-google-ai
 
