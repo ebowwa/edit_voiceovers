@@ -1,7 +1,7 @@
 # from video.video_processing import video_to_frames
 # from _examples.twoframe import video_to_frames
 from tts.text_to_speech import generate_speech
-from utils.img_processing import base64_to_image
+from _examples.img_processing import base64_to_image
 from utils.logger import log_response
 from _examples.api_interaction import configure_apis, get_content_from_image
 from utils.overlay_audio import overlay_audio  # Imported overlay_audio function

@@ -1,5 +1,9 @@
-from video_collage import video_collage as process_video
-from stream import generate_content_from_image
+# This script take the collages (lower level scripts in `/video`) take the video break it down by frame rate 
+# then apply a little magic to get specialized collages which we feed to our vision language model
+# this if ran as main will send the collages to the model and the model will speak about them all in a sequential manner
+# minorly explictict mentions like `bay area venacular` get skipped by Google Gemini, it is advised for now to avoid such prompting and requests
+from utils.video_collage import video_collage as process_video
+from utils.stream import generate_content_from_image
 from utils.read_prompt import read_prompt_from_markdown
 import os
 
@@ -30,9 +34,6 @@ def main():
     # Process the collages in the directory
     prompt_path = 'prompts/narrations/bay_areav2.md'
     process_collages(collage_directory, prompt_path)
-
-    # Additional functionalities related to resemble and overlaying audio
-    # can be implemented here as needed.
 
 if __name__ == "__main__":
     main()
