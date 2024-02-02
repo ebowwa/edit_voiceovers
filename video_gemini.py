@@ -23,9 +23,9 @@ def vision_model(video_file_path, target_frame_rate, prompt_path):
     return responses
 
 # Example usage (commented out since this script is to be used as a module):
-video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
-target_frame_rate = 27
-prompt_path = 'prompts/narrations/bay_areav2.md'
-responses = vision_model(video_file_path, target_frame_rate, prompt_path)
-for response in responses:
-     print(response)
+# video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
+# target_frame_rate = 27
+# prompt_path = 'prompts/narrations/bay_areav2.md'
+# responses = vision_model(video_file_path, target_frame_rate, prompt_path)
+# for response in responses:
+#    print(response)
