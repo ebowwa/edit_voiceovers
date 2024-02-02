@@ -1,6 +1,6 @@
 # Updated main.py to use the new video_lm and utils/generate_tts_audio modules
 from _examples.video_lm import process_collages, process_video as process_video_collages
-from utils.generate_tts_audio import generate_response_audio
+from tts.text_to_speech import generate_speech
 from utils.overlay_audio import overlay_audio  # Assuming overlay_audio function is still relevant
 import os
 

@@ -26,16 +26,11 @@ def generate_content_from_image(image_path, prompt, retries=3, delay=2):
                 response_text += chunk_text
 
             return response_text
-
-        except configure_genai.generativeai.types.generation_types.BlockedPromptException as e:
-            print("BlockedPromptException encountered. Retrying...")
-            time.sleep(delay)  # Wait for a bit before retrying
-            attempt += 1
+#        try:
+#            response_text
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
-            break  # Break out of the loop on other exceptions
-
-    return "Failed to generate content after retries."
+            print(f'{type(e).__name__}: {e}')
+        return "Failed to generate content after retries."
 
 if __name__ == "__main__":
 
