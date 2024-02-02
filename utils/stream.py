@@ -1,3 +1,4 @@
+# imported at video_lm.py not higher level 
 import PIL.Image
 from gemini.model_setup import configure_genai
 from gemini.auth_gemini import get_api_key

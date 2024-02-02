@@ -1,4 +1,5 @@
 # read_prompt.py
+# imported at video_lm.py
 
 def read_prompt_from_markdown(file_path):
     """

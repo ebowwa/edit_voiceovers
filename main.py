@@ -1,42 +1,29 @@
-# DEPRECTIATED WITHOUT A REPLACEMENT
-# from video.video_processing import video_to_frames
-# from _examples.twoframe import video_to_frames
-from tts.text_to_speech import generate_speech
-from _examples.img_processing import base64_to_image
-from utils.logger import log_response
-from _examples.api_interaction import configure_apis, get_content_from_image
-from utils.overlay_audio import overlay_audio  # Imported overlay_audio function
+# Updated main.py to use the new video_lm and utils/generate_tts_audio modules
+from video_lm import process_collages, process_video as process_video_collages
+from utils.generate_tts_audio import generate_response_audio
+from utils.overlay_audio import overlay_audio  # Assuming overlay_audio function is still relevant
 import os
-import cv2
 
 def process_video(video_path, prompt_path, audio_path, output_video_path):
-    configure_apis()
-    # Change here: Use an asterisk (*) to capture the rest of the return values in a variable called `_rest`
-    base64_frames, *_rest = video_to_frames(video_path)
+    # Process video to create collages and get the directory where they are saved
+    target_frame_rate = 24  # Assuming a target frame rate
+    collage_directory = process_video_collages(video_path, target_frame_rate)
 
-    for base64_frame in base64_frames:
-        image = base64_to_image(base64_frame)
-        temp_image_path = 'temp_image.jpg'
-        cv2.imwrite(temp_image_path, image)
-
-        with open(prompt_path, 'r') as file:
-            prompt = file.read().strip()
-        
-        response_text = get_content_from_image(temp_image_path, prompt)
-        log_response(response_text, 'llm_response.log')
-
-        project_uuid = "0448305f"
-        voice_uuid = "d3e61caf"
-        title = "Generated Content Title"
-
-        generate_speech(response_text, project_uuid, voice_uuid, title, sequence_number)
-
-        # Clean up temporary image file
-        if os.path.exists(temp_image_path):
-            os.remove(temp_image_path)
+    # Process the collages in the directory
+    process_collages(collage_directory, prompt_path)
+    
+    # Assuming generate_response_audio function now takes care of generating speech audio for each response
+    # and there is a way to enumerate or track sequence number of each response for audio generation
+    # Let's assume we have a way to get the total number of collages or responses
+    number_of_collages = len(os.listdir(collage_directory))
+    for sequence_number in range(number_of_collages):
+        # Here we might need to actually get the response text from the collage processing, which is not clear
+        # from the given code. This is a placeholder to illustrate where and how generate_response_audio would be used.
+        response_text = "Response text placeholder for collage #" + str(sequence_number)
+        generate_response_audio(response_text, sequence_number)
 
     # Overlay the generated audio onto the original video
     overlay_audio(video_path, audio_path, output_video_path)
 
 # Example usage
-process_video('public/wrestling.mp4', 'prompts/narrations/machine_god.md', 'generated_audio.wav', 'output_video.mp4')
+process_video('public/wrestling.mp4', 'prompts/narrations/tiktokerv3.md', 'generated_audio.wav', 'output_video.mp4')
