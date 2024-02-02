@@ -1,12 +1,12 @@
 # Updated main.py to use the new video_lm and utils/generate_tts_audio modules
-from video_lm import process_collages, process_video as process_video_collages
+from _examples.video_lm import process_collages, process_video as process_video_collages
 from utils.generate_tts_audio import generate_response_audio
 from utils.overlay_audio import overlay_audio  # Assuming overlay_audio function is still relevant
 import os
 
 def process_video(video_path, prompt_path, audio_path, output_video_path):
     # Process video to create collages and get the directory where they are saved
-    target_frame_rate = 24  # Assuming a target frame rate
+    target_frame_rate = 60  # Assuming a target frame rate
     collage_directory = process_video_collages(video_path, target_frame_rate)
 
     # Process the collages in the directory
