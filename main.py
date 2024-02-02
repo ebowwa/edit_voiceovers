@@ -1,29 +1,20 @@
-# Updated main.py to use the new video_lm and utils/generate_tts_audio modules
-from _examples.video_lm import process_collages, process_video as process_video_collages
-from tts.text_to_speech import generate_speech
-from utils.overlay_audio import overlay_audio  # Assuming overlay_audio function is still relevant
-import os
+from multimodal import process_video_and_generate_speech
+from utils.overlay_audio import overlay_audio
 
-def process_video(video_path, prompt_path, audio_path, output_video_path):
-    # Process video to create collages and get the directory where they are saved
-    target_frame_rate = 60  # Assuming a target frame rate
-    collage_directory = process_video_collages(video_path, target_frame_rate)
+# Define paths and parameters
+video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
+target_frame_rate = 60
+prompt_path = 'prompts/narrations/concise-notes.md'
+project_uuid = '0448305f'
+voice_uuid = 'd3e61caf'
+output_video_path = 'output_video_with_audio.mp4'  # Final output video path
 
-    # Process the collages in the directory
-    process_collages(collage_directory, prompt_path)
-    
-    # Assuming generate_response_audio function now takes care of generating speech audio for each response
-    # and there is a way to enumerate or track sequence number of each response for audio generation
-    # Let's assume we have a way to get the total number of collages or responses
-    number_of_collages = len(os.listdir(collage_directory))
-    for sequence_number in range(number_of_collages):
-        # Here we might need to actually get the response text from the collage processing, which is not clear
-        # from the given code. This is a placeholder to illustrate where and how generate_response_audio would be used.
-        response_text = "Response text placeholder for collage #" + str(sequence_number)
-        generate_response_audio(response_text, sequence_number)
+# Process video and generate speech
+audio_files = process_video_and_generate_speech(video_file_path, target_frame_rate, prompt_path, project_uuid, voice_uuid)
 
-    # Overlay the generated audio onto the original video
-    overlay_audio(video_path, audio_path, output_video_path)
-
-# Example usage
-process_video('public/wrestling.mp4', 'prompts/narrations/tiktokerv3.md', 'generated_audio.wav', 'output_video.mp4')
+# Assuming only one audio overlay is required, choose the first audio file or a specific logic to select one
+if audio_files:
+    overlay_audio(video_file_path, audio_files[0], output_video_path)
+    print("Audio overlay completed successfully.")
+else:
+    print("No audio files were generated.")

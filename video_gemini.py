@@ -1,4 +1,5 @@
 from utils.stream import generate_content_from_image
+# imports gemini/model_setup.py & gemini/auth_gemini.py
 from utils.read_prompt import read_prompt_from_markdown
 from video.collage_builds import generate_collages_from_video, cleanup_collage_directory
 import os

@@ -8,10 +8,10 @@ def configure_genai(api_key):
     genai.configure(api_key=api_key)
 
     generation_config = {
-        "temperature": 0.75, #0.55
-        "top_p": 1, # 1
+        "temperature": 0.4, #0.55
+        "top_p": 0, # 1
         "top_k": 32, # 32
-        "max_output_tokens": 60, # 4096
+        "max_output_tokens": 75, # 4096
     }
 
     safety_settings =   [
