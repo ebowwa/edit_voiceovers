@@ -1,3 +1,7 @@
+# this is just an easy wrapper around collage_build, this adds no further depth, this will be refactored
+# this is imported by video_lm.py so to correct this is a refactor that must be consitent with video_lm.py
+# this is not relevant to the final output overlayed video to the user rather this is to display to the model the frame rate collages of the video
+
 from video.collage_build import main as collage_main
 
 def video_collage(video_file_path='public/AdobeStock_607123108_Video_HD_Preview.mov', target_frame_rate=27):

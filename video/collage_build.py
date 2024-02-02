@@ -1,3 +1,6 @@
+# imports from /video to process the video i.e. loading, breaking it down, preparing it to send to the api requests
+# manages the base64 requirement, chunks the frames 3x3, special time overlays to add further depth to the model about time dimensions
+#
 import os
 import cv2
 import base64
@@ -70,7 +73,8 @@ def main(video_file_path, target_frame_rate):
             print(f"Collage {i+1} created: {collage_file}")
 
     return collage_directory
-### after use `"_temp_collages" `` should be deleted
+
+# after single use processing  `"_temp_collages" `` should be deleted
 
 if __name__ == "__main__":
     video_file = "public/wrestling.mp4"

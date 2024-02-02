@@ -1,3 +1,5 @@
+# works with the resemble api 
+# future support for other tts providers and cloud hosting options
 from tts.text_to_speech import generate_speech
 
 def generate_response_audio(response_text, sequence_number):

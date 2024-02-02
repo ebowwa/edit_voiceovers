@@ -1,3 +1,4 @@
+# need a way to be sure the model is saying and being true to the watch moment
 from moviepy.editor import VideoFileClip, AudioFileClip
 
 def overlay_audio(video_path, audio_path, output_path):
