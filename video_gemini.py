@@ -16,8 +16,9 @@ def vision_model(video_file_path, target_frame_rate, prompt_path):
     for collage in collages:
         image_path = os.path.join(collage_directory, collage)
         response = generate_content_from_image(image_path, prompt)
-        responses.append(f"Response for {collage}: {response}")
-    
+        responses.append(f"{response}")
+        print(f"Response for {collage}: {response}")
+
     # Optionally, clean up the collage directory after processing
     cleanup_collage_directory(collage_directory)
 

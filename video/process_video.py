@@ -5,7 +5,7 @@ from video.frame_rates.frame_rate_conversion import convert_frame_rate
 from video.frame_rates.video_properties import get_video_properties # video meta data and calculations
 from _examples.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes # extracting frames and analysis for changes
 
-def process_video(video_file_path, target_frame_rate):
+def process_video(video_file_path, target_frame_rate, frame_selection_strategy=None):
     """
     Processes a video file to adjust its frame rate and get its properties.
 
@@ -23,18 +23,24 @@ def process_video(video_file_path, target_frame_rate):
     # Extract frames from the video using the function from the imported script
     frames = extract_frames_from_video(video_file_path)
 
-    # Convert frame rate
-    adjusted_frames = convert_frame_rate(frames, target_frame_rate, video_props['Original Frame Rate'])
-
-    # Analyze frame rate changes using the function from the imported script
+    # New logic for flexible frame selection
+    selected_frames = []
+    if frame_selection_strategy:
+        for i, frame in enumerate(frames):
+            # Example: frame_selection_strategy could analyze frame content or use simple index-based selection
+            if frame_selection_strategy(i, frame):
+                selected_frames.append(frame)
+    else:
+        # Default behavior: select all frames or adjust based on target_frame_rate
+        selected_frames = convert_frame_rate(frames, target_frame_rate, video_props['Original Frame Rate'])
+    
+    # The rest of the function, including frame rate analysis, remains unchanged.
     frame_rate_analysis = analyze_frame_rate_changes(video_file_path)
-
-    # Return the video properties along with adjusted frames and frame rate analysis
+    
     return {
         'Video Properties': video_props,
-        'Adjusted Frames': adjusted_frames,
+        'Adjusted Frames': selected_frames,  # Use the selected frames instead of all adjusted frames
         'Frame Rate Analysis': frame_rate_analysis,
-        'frames' : frames
     }
 
 # Example usage

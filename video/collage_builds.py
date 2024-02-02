@@ -1,5 +1,5 @@
 
-# Required Libraries
+# can this script be manipulable, say 
 import os
 import cv2
 import base64

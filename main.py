@@ -4,7 +4,7 @@ from utils.overlay_audio import overlay_audio
 # Define paths and parameters
 video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
 target_frame_rate = 60
-prompt_path = 'prompts/narrations/concise-notes.md'
+prompt_path = 'prompts/narrations/tik4.md'
 project_uuid = '0448305f'
 voice_uuid = 'd3e61caf'
 output_video_path = 'output_video_with_audio.mp4'  # Final output video path

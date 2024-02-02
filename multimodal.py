@@ -15,11 +15,11 @@ def process_video_and_generate_speech(video_file_path, target_frame_rate, prompt
 
 
 # Parameters for video processing and TTS
-# video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
-# target_frame_rate = 60  # Example frame rate
-# prompt_path = 'prompts/narrations/concise-notes.md'
-# project_uuid = '0448305f'
-# voice_uuid = 'd3e61caf'
+video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
+target_frame_rate = 60  # Example frame rate
+prompt_path = 'prompts/narrations/tik4.md'
+project_uuid = '0448305f'
+voice_uuid = 'd3e61caf'
 
 # Execute the high-level processing function
-# process_video_and_generate_speech(video_file_path, target_frame_rate, prompt_path, project_uuid, voice_uuid)
+process_video_and_generate_speech(video_file_path, target_frame_rate, prompt_path, project_uuid, voice_uuid)
