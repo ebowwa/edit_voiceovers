@@ -1,4 +1,5 @@
-
+# breaks down the video, by importing the conversion, getting the video properties, extracting and analysizing the frames we can then build the collages
+# we feed the model the collages with additional features
 import cv2
 from video.frame_rates.frame_rate_conversion import convert_frame_rate 
 from video.frame_rates.video_properties import get_video_properties # video meta data and calculations
