@@ -4,6 +4,7 @@ import os
 import cv2
 import base64
 import numpy as np
+import shutil
 from video.process_video import process_video  
 from video.collage.create_collage import create_collage 
 
