@@ -1,6 +1,7 @@
 from video_gemini import vision_model
-from tts.text_to_speech import generate_speech
+from tts.text_to_speech import generate_speech 
 from pydub import AudioSegment  # Ensure pydub is installed for audio handling.
+from moviepy.editor import VideoFileClip  # Ensure moviepy is installed for video handling.
 
 class VideoSpeechProcessor:
     def __init__(self, video_file_path, target_frame_rate, prompt_path, project_uuid, voice_uuid):
@@ -10,6 +11,11 @@ class VideoSpeechProcessor:
         self.project_uuid = project_uuid
         self.voice_uuid = voice_uuid
         self.total_text_length = 0  # Initialize total text length counter
+
+    def get_video_duration(self):
+        """Get the duration of the video in seconds."""
+        with VideoFileClip(self.video_file_path) as video:
+            return video.duration
 
     def process_video(self):
         """Process video to obtain text responses for TTS."""
@@ -40,10 +46,11 @@ class VideoSpeechProcessor:
 
     def process_video_and_generate_speech(self):
         """Main method to process video and generate speech."""
+        video_duration = self.get_video_duration()
         responses = self.process_video()
         audio_files = self.generate_speech_for_responses(responses)
         total_audio_duration = self.calculate_total_audio_duration(audio_files)
-        return audio_files, self.total_text_length, total_audio_duration
+        return audio_files, self.total_text_length, total_audio_duration, video_duration
 
 # Example usage
 if __name__ == "__main__":
@@ -54,7 +61,10 @@ if __name__ == "__main__":
     voice_uuid = 'd3e61caf'
 
     processor = VideoSpeechProcessor(video_file_path, target_frame_rate, prompt_path, project_uuid, voice_uuid)
-    audio_files, total_text_length, total_audio_duration = processor.process_video_and_generate_speech()
+    audio_files, total_text_length, total_audio_duration, video_duration = processor.process_video_and_generate_speech()
     print(f"Generated audio files: {audio_files}")
     print(f"Total text length sent to TTS API: {total_text_length} characters")
     print(f"Total audio duration: {total_audio_duration} seconds")
+    print(f"Video duration: {video_duration} seconds")
+
+    # Comparison or further processing can be done here with video_duration and total_audio_duration
