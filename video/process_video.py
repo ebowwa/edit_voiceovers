@@ -3,7 +3,7 @@
 import cv2
 from video.frame_rates.frame_rate_conversion import convert_frame_rate 
 from video.frame_rates.video_properties import get_video_properties # video meta data and calculations
-from _examples.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes # extracting frames and analysis for changes
+from video.frame_rates.frame_rate_analysis import extract_frames_from_video, analyze_frame_rate_changes # extracting frames and analysis for changes
 
 def process_video(video_file_path, target_frame_rate, frame_selection_strategy=None):
     """
