@@ -54,9 +54,9 @@ class VideoSpeechProcessor:
 
 # Example usage
 if __name__ == "__main__":
-    video_file_path = 'public/AdobeStock_607123108_Video_HD_Preview.mov'
-    target_frame_rate = 60
-    prompt_path = 'prompts/narrations/didyouknow.md'
+    video_file_path = 'public/wrestling.mp4'
+    target_frame_rate = 30
+    prompt_path = 'prompts/narrations/tik5.md'
     project_uuid = '0448305f'
     voice_uuid = 'd3e61caf'
 
