@@ -8,3 +8,5 @@ Pillow
 google-generativeai
 instaloader
 psycopg2
+tqdm --upgrade
+opencv-python

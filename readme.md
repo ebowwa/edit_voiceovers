@@ -50,6 +50,9 @@ shorts are a great medium to getting people's attention, given the attention eco
 - toggable whisper/equivalent transcriptions with timestamps used in the input prompt
 
 for installation check
+pip install -U google-generativeai
+
+
 ``` 
 requirements.txt
 ```
